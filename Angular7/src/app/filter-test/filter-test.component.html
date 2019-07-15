@@ -1,0 +1,49 @@
+<div class="container">
+  <h1 class="text-center">Lọc danh sách hiển thị</h1>
+  <div class="form-group form-inline text-center">
+    <label for="form-label text-bold" style="margin-right:10px;">Nhập vào từ khóa</label>
+    <input class="form-control" type="text" (keyup)="doFilter($event)">
+  </div>
+  <div class="card card-body">
+    <table class="table table-borderless table-striped">
+      <thead class="thead-dark">
+        <tr class="text-center">
+          <th>STT</th>
+          <th>Tên sách</th>
+          <th>Tác giả</th>
+          <th>Gía bán</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of filter; index as i">
+          <td>{{i}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.author}}</td>
+          <td>{{item.price}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card card-body">
+    <form [formGroup]="profile" (ngSubmit)="onSubmit(profile.value)" id="profile">
+      <div class="form-group form-inline">
+        <label for="" class="control-label col-md-3">User name</label>
+        <input type="text" class="form-control col-md-7" formControlName="name">
+      </div>
+      <div class="form-group form-inline">
+        <label for="" class="control-label col-md-3">Email</label>
+        <input type="text" class="form-control col-md-7" formControlName="email">
+      </div>
+      <div class="form-group form-inline">
+        <label for="" class="control-label col-md-3">password</label>
+        <input type="text" class="form-control col-md-7" formControlName="password">
+      </div>
+      <div class="form-group form-inline">
+        <button class="btn btn-success col-md-1 offset-md-9">Submit</button>
+      </div>
+    </form>
+    <div>
+      {{ profile.value | json}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+::-webkit-input-placeholder {
+    font-style: italic;
+ }
+ :-moz-placeholder {
+    font-style: italic;  
+ }
+ ::-moz-placeholder {
+    font-style: italic;  
+ }
+ :-ms-input-placeholder {  
+    font-style: italic; 
+ }
+button,label, h1, h2, h3, h4, h5, h6{
+    color:#194795;
+    margin:0;
+}
+input[type=text]{
+    height: 30px;
+}
+.m-container{
+    background: #d7e4f2;
+}
+.btn-blue{
+    background-image: linear-gradient(#d6e7ff, #b2d4ff, #d6e7ff);
+}
+.m-row{
+    margin: -5px;
+}
+.m-col{
+    padding: 5px;
+}

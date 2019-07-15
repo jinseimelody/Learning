@@ -1,0 +1,10 @@
+<div class="card-body border">
+  <div class="form-inline">
+    <label class="col-md-2 justify-content-start pl-0">Nhập tên bạn</label>
+    <input #txtTest [(ngModel)]="yourName" class="form-control col-md-4">
+  </div><br>
+  <div>
+    <strong>Tên bạn là: </strong> <em>{{yourName}}</em><br>
+    <strong>value: </strong> <em>{{ txtTest.value | json }}</em>
+  </div>
+</div>
